@@ -57,6 +57,13 @@ function App() {
           playlists,
         });
       });
+
+      s.getPlaylist('37i9dQZEVXcSABhO6djThW').then(response=>
+        dispatch({
+          type:"SET_DISCOVER_WEEKLY",
+          discover_weekly:response,
+        })
+      )
     }
   }, [token, dispatch]);
 
